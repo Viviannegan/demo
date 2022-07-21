@@ -7,7 +7,6 @@ package demo;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
-import javax.faces.*;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import org.primefaces.PrimeFaces;
@@ -18,22 +17,20 @@ import org.primefaces.util.EscapeUtils;
 /**
  * @author v_v_v
  */
+@Named
 @RequestScoped
-@ManagedBean(name = "bonLiv")
+
 public class BonLiv {
   private UploadedFile bonLiv;
-  // private UploadedFiles files;//pour deposer plusieures fichiers
+  // private UploadedFiles files;
   private String dropZoneText = "Drop zone p:inputTextarea demo.";
 
-  // pour deposer un fichier, ici c'est deposer le fichier Bon de Livraison
   public void upload() {
     if (bonLiv != null) {
       FacesMessage message = new FacesMessage("Successful", bonLiv.getFileName() + " is uploaded.");
       FacesContext.getCurrentInstance().addMessage(null, message);
     }
   }
-
-  // pour deposer plusieures fichiers
   /*
       public void uploadMultiple() {
           if (files != null) {
@@ -44,7 +41,6 @@ public class BonLiv {
           }
       }
   */
-
   public void handleFileUpload(FileUploadEvent event) {
     FacesMessage message =
         new FacesMessage("Successful", event.getFile().getFileName() + " is uploaded.");
@@ -57,8 +53,6 @@ public class BonLiv {
     PrimeFaces.current()
         .executeScript(jsVal + "(" + jsVal + "() + '\\n\\n" + fileName + " uploaded.')");
   }
-
-  // pour deposer plusieures fichiers
   /*
       public void handleFilesUpload(FilesUploadEvent event) {
           for (UploadedFile f : event.getFiles().getFiles()) {
@@ -75,8 +69,6 @@ public class BonLiv {
   public void setBonLiv(UploadedFile bonLiv) {
     this.bonLiv = bonLiv;
   }
-
-  // pour deposer plusieures fichiers
   /*
       public UploadedFiles getFiles() {
           return files;
@@ -86,7 +78,6 @@ public class BonLiv {
           this.files = files;
       }
   */
-
   public String getDropZoneText() {
     return dropZoneText;
   }

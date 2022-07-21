@@ -14,7 +14,7 @@
         <div class="p-d-flex p-flex-column">
             <h:form>
                 <h2 class="p-mt-0">Identification du matériel : </h2>
-                
+ 
                 <h:panelGrid columns="3" cellpadding="7">
                     <p:outputLabel for="name" value="Nom d’appareillage"/>
                     <p:inputText id="name" value="#{demo.nomApp}"/>
@@ -39,8 +39,6 @@
                         <p:datePicker id="navigator" value="#{demo.dateAchat}" monthNavigator="true" yearNavigator="true" showWeek="true"/>
                     </h:panelGrid>
                 </div>
-                
-                
                 
                 <h:panelGrid columns="3" cellpadding="7">
                     <p:outputLabel for="fournisseur" value="Fournisseur"/>
@@ -103,17 +101,15 @@
                 </h:panelGrid>
                      
             <!-- upload -->
-           <p:growl id="messages" showDetail="true"/>
+                <p:growl id="messages" showDetail="true"/>
+                <h:form enctype="multipart/form-data">
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel value="Bon de livraison"/>                             
+                    <p:fileUpload value="#{bonLiv.bonLiv}" mode="simple" skinSimple="true"/>
+                    <p:commandButton value="Submit" ajax="false" action="#{bonliv.upload}" styleClass="p-mt-3 ui-button-outlined p-d-block"/>
+                </h:panelGrid>
+                </h:form>
 
-<div class="card">
-    <h5>Single</h5>
-    <h:form enctype="multipart/form-data">
-        <p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true"/>
-
-        <p:commandButton value="Submit" ajax="false" action="#{fileUploadView.upload}" styleClass="p-mt-3 ui-button-outlined p-d-block"/>
-    </h:form>
-</div>
-            
                 <div class="ui-inputgroup">
                 <h:panelGrid columns="3" cellpadding="7">
                     <p:outputLabel for="montantHT" value="Montant HT"/>          
