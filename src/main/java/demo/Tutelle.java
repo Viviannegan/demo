@@ -13,49 +13,49 @@ import javax.faces.*;
 import javax.inject.Named;
 
 /**
- *
  * @author v_v_v
  */
 @Named
 @RequestScoped
 @ManagedBean(name = "tutelle")
 public class Tutelle {
-    
-    private Map<String, String> tutImpu = new HashMap<>();
-    private String labeled;
-    //fin tutelle imputation
-    
-    //tutelle imputation
-     @PostConstruct
-    public void init() {
-    //tutImpu
-        tutImpu = new HashMap<>();
-        tutImpu.put("INP", "INP");
-        tutImpu.put("UPS", "UPS");
-        tutImpu.put("CNRS", "CNRS");               
-    }
-        
-        public Map<String, String> getTutImpu() {
-        return tutImpu;
-    }
 
-    public void setTutImpu(Map<String, String> tutImpu) {
-        this.tutImpu = tutImpu;
-    }
-    public String getLabeled() {
-        return labeled;
-    }
+  private Map<String, String> tutImpu = new HashMap<>();
+  private String labeled;
+  // fin tutelle imputation
 
-    public void setLabeled(String labeled) {
-        this.labeled = labeled;
-    }
+  // tutelle imputation
+  @PostConstruct
+  public void init() {
+    // tutImpu
+    tutImpu = new HashMap<>();
+    tutImpu.put("INP", "INP");
+    tutImpu.put("UPS", "UPS");
+    tutImpu.put("CNRS", "CNRS");
+  }
 
-    /*public String getTutImpu() {
-        return tutImpu;
-    }
+  public Map<String, String> getTutImpu() {
+    return tutImpu;
+  }
 
-    public void setTutImpu(String tutImpu) {
-        this.tutImpu = tutImpu;
-    }*/
-    
+  public void setTutImpu(Map<String, String> tutImpu) {
+    this.tutImpu = tutImpu;
+  }
+
+  public String getLabeled() {
+    return labeled;
+  }
+
+  public void setLabeled(String labeled) {
+    this.labeled = labeled;
+  }
+
+  /*public String getTutImpu() {
+      return tutImpu;
+  }
+
+  public void setTutImpu(String tutImpu) {
+      this.tutImpu = tutImpu;
+  }*/
+
 }

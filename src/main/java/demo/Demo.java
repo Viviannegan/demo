@@ -16,128 +16,124 @@ import org.primefaces.model.file.UploadedFile;
 import org.primefaces.util.EscapeUtils;
 
 /**
- *
  * @author v_v_v
  */
 public class Demo {
-    private String nomApp;
-    private String demandeur;
-    private String groupe;
-    private Date dateAchat;
-    private String fournisseur;
-    private String refApp;   
-    private String bonCom;
-    private String numImmoTut;
-    private String montantHT;
-    private String montantTTC;
-    private Date dateMisServ;
-    private String dureeAmort;
-    private Date dateFinAmort;
-            
-    
+  private String nomApp;
+  private String demandeur;
+  private String groupe;
+  private Date dateAchat;
+  private String fournisseur;
+  private String refApp;
+  private String bonCom;
+  private String numImmoTut;
+  private String montantHT;
+  private String montantTTC;
+  private Date dateMisServ;
+  private String dureeAmort;
+  private Date dateFinAmort;
 
-    public String getNomApp() {
-        return nomApp;
-    }
+  public String getNomApp() {
+    return nomApp;
+  }
 
-    public void setNomApp(String nomApp) {
-        this.nomApp = nomApp;
-    }   
-    
-    public String getDemandeur() {
-        return demandeur;
-    }
+  public void setNomApp(String nomApp) {
+    this.nomApp = nomApp;
+  }
 
-    public void setDemandeur(String demandeur) {
-        this.demandeur = demandeur;
-    }
+  public String getDemandeur() {
+    return demandeur;
+  }
 
-    public String getGroupe() {
-        return groupe;
-    }
+  public void setDemandeur(String demandeur) {
+    this.demandeur = demandeur;
+  }
 
-    public void setGroupe(String groupe) {
-        this.groupe = groupe;
-    }
+  public String getGroupe() {
+    return groupe;
+  }
 
-    public Date getDateAchat() {
-        return dateAchat;
-    }
+  public void setGroupe(String groupe) {
+    this.groupe = groupe;
+  }
 
-    public void setDateAchat(Date dateAchat) {
-        this.dateAchat = dateAchat;
-    }
+  public Date getDateAchat() {
+    return dateAchat;
+  }
 
-    public String getFournisseur() {
-        return fournisseur;
-    }
+  public void setDateAchat(Date dateAchat) {
+    this.dateAchat = dateAchat;
+  }
 
-    public void setFournisseur(String fournisseur) {
-        this.fournisseur = fournisseur;
-    }
+  public String getFournisseur() {
+    return fournisseur;
+  }
 
-    public String getRefApp() {
-        return refApp;
-    }
+  public void setFournisseur(String fournisseur) {
+    this.fournisseur = fournisseur;
+  }
 
-    public void setRefApp(String refApp) {
-        this.refApp = refApp;
-    }
-        
-    public String getBonCom() {
-        return bonCom;
-    }
+  public String getRefApp() {
+    return refApp;
+  }
 
-    public void setBonCom(String bonCom) {
-        this.bonCom = bonCom;
-    }
+  public void setRefApp(String refApp) {
+    this.refApp = refApp;
+  }
 
-    public String getNumImmoTut() {
-        return numImmoTut;
-    }
+  public String getBonCom() {
+    return bonCom;
+  }
 
-    public void setNumImmoTut(String numImmoTut) {
-        this.numImmoTut = numImmoTut;
-    }
-    
-    public String getMontantHT() {
-        return montantHT;
-    }
+  public void setBonCom(String bonCom) {
+    this.bonCom = bonCom;
+  }
 
-    public void setMontantHT(String montantHT) {
-        this.montantHT = montantHT;
-    }
+  public String getNumImmoTut() {
+    return numImmoTut;
+  }
 
-    public String getMontantTTC() {
-        return montantTTC;
-    }
+  public void setNumImmoTut(String numImmoTut) {
+    this.numImmoTut = numImmoTut;
+  }
 
-    public void setMontantTTC(String montantTTC) {
-        this.montantTTC = montantTTC;
-    }
+  public String getMontantHT() {
+    return montantHT;
+  }
 
-    public Date getDateMisServ() {
-        return dateMisServ;
-    }
+  public void setMontantHT(String montantHT) {
+    this.montantHT = montantHT;
+  }
 
-    public void setDateMisServ(Date dateMisServ) {
-        this.dateMisServ = dateMisServ;
-    }
+  public String getMontantTTC() {
+    return montantTTC;
+  }
 
-    public String getDureeAmort() {
-        return dureeAmort;
-    }
+  public void setMontantTTC(String montantTTC) {
+    this.montantTTC = montantTTC;
+  }
 
-    public void setDureeAmort(String dureeAmort) {
-        this.dureeAmort = dureeAmort;
-    }
+  public Date getDateMisServ() {
+    return dateMisServ;
+  }
 
-    public Date getDateFinAmort() {
-        return dateFinAmort;
-    }
+  public void setDateMisServ(Date dateMisServ) {
+    this.dateMisServ = dateMisServ;
+  }
 
-    public void setDateFinAmort(Date dateFinAmort) {
-        this.dateFinAmort = dateFinAmort;
-    }
+  public String getDureeAmort() {
+    return dureeAmort;
+  }
 
+  public void setDureeAmort(String dureeAmort) {
+    this.dureeAmort = dureeAmort;
+  }
+
+  public Date getDateFinAmort() {
+    return dateFinAmort;
+  }
+
+  public void setDateFinAmort(Date dateFinAmort) {
+    this.dateFinAmort = dateFinAmort;
+  }
 }
