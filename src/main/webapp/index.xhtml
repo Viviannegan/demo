@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Repertoire</title>
+    </h:head>
+    <h:body>
+        
+        <!--<div class="card">-->
+        <div class="p-d-flex p-flex-column">
+            <h:form>
+                <h2 class="p-mt-0">Identification du matériel : </h2>
+                
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="name" value="Nom d’appareillage"/>
+                    <p:inputText id="name" value="#{demo.nomApp}"/>
+                    <h:outputText id="display1" value="#{demo.nomApp}"/>
+                </h:panelGrid>
+                
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="demandeur" value="Demandeur"/>
+                    <p:inputText id="demandeur" value="#{demo.demandeur}"/>
+                    <h:outputText id="display2" value="#{demo.demandeur}"/>
+                </h:panelGrid>
+                
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="groupe" value="Groupe"/>
+                    <p:inputText id="groupe" value="#{demo.groupe}"/>
+                    <h:outputText id="display3" value="#{demo.groupe}"/>
+                </h:panelGrid>
+                
+                <div class="p-field p-col-12 p-md-4">
+                    <h:panelGrid columns="3" cellpadding="7">
+                        <p:outputLabel for="navigator" value="Date d’achat"/>
+                        <p:datePicker id="navigator" value="#{demo.dateAchat}" monthNavigator="true" yearNavigator="true" showWeek="true"/>
+                    </h:panelGrid>
+                </div>
+                
+                
+                
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="fournisseur" value="Fournisseur"/>
+                    <p:inputText id="fournisseur" value="#{demo.fournisseur}"/>
+                    <h:outputText id="display5" value="#{demo.fournisseur}"/>
+                </h:panelGrid>
+           
+            </h:form>
+        </div>
+            
+        <!--<div class="card">-->
+        <div class="p-d-flex p-flex-column">
+            <h:form>
+                <h2 class="p-mt-0">Technique : </h2> 
+                
+                <div class="p-field p-col-12 p-md-4">
+                <h:panelGrid columns="3" cellpadding="7">
+                <p:outputLabel value="Catégorie"/>
+                <p:selectOneMenu id="labeled" value="#{categorie.labeled}" label="choisissez"
+                                alwaysDisplayLabel="true">
+                    <f:selectItems value="#{categorie.categorie}"/>
+                </p:selectOneMenu>
+                </h:panelGrid>
+                </div>
+                
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="refApp" value="Référent appareillage"/>
+                    <p:inputText id="refApp" value="#{demo.refApp}"/>
+                    <h:outputText id="display6" value="#{demo.refApp}"/>
+                </h:panelGrid>
+
+            </h:form>
+        </div>
+            
+        <!--<div class="card">-->
+        <div class="p-d-flex p-flex-column">
+            <h:form>
+            <h2 class="p-mt-0">Finance : </h2> 
+                        
+            <div class="p-field p-col-12 p-md-4">
+                <h:panelGrid columns="3" cellpadding="7">
+                <p:outputLabel value="Tutelle imputation"/>
+                <p:selectOneMenu id="labeled" value="#{tutelle.labeled}" label="choisissez"
+                                alwaysDisplayLabel="true">
+                    <f:selectItems value="#{tutelle.tutImpu}"/>
+                </p:selectOneMenu>
+                </h:panelGrid>
+            </div>
+             
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="bonCom" value="Bon de commande"/>
+                    <p:inputText id="bonCom" value="#{demo.bonCom}"/>
+                    <h:outputText id="display8" value="#{demo.bonCom}"/>
+                </h:panelGrid>
+            
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="numImmoTut" value="Numéro immo tutelle"/>
+                    <p:inputText id="numImmoTut" value="#{demo.numImmoTut}"/>
+                    <h:outputText id="display9" value="#{demo.numImmoTut}"/>
+                </h:panelGrid>
+                     
+            <!-- upload -->
+           <p:growl id="messages" showDetail="true"/>
+
+<div class="card">
+    <h5>Single</h5>
+    <h:form enctype="multipart/form-data">
+        <p:fileUpload value="#{fileUploadView.file}" mode="simple" skinSimple="true"/>
+
+        <p:commandButton value="Submit" ajax="false" action="#{fileUploadView.upload}" styleClass="p-mt-3 ui-button-outlined p-d-block"/>
+    </h:form>
+</div>
+            
+                <div class="ui-inputgroup">
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="montantHT" value="Montant HT"/>          
+                    <p:inputText placeholder="00.00" id="montantHT" value="#{demo.montantHT}"/>
+                    <div class="ui-inputgroup-addon">€</div>
+                    <h:outputText id="display11" value="#{demo.montantHT}"/>
+                </h:panelGrid>
+                </div>
+            
+                <div class="ui-inputgroup">
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="montantTTC" value="Montant TTC"/>                    
+                    <p:inputText placeholder="00.00" id="montantTTC" value="#{demo.montantTTC}"/>
+                    <div class="ui-inputgroup-addon">€</div>
+                    <h:outputText id="display12" value="#{demo.montantTTC}"/>
+                </h:panelGrid>
+                </div>
+                                       
+                <div class="p-field p-col-12 p-md-4">
+                    <h:panelGrid columns="3" cellpadding="7">
+                        <p:outputLabel for="dateMisServ" value="Date mise en service"/>
+                        <p:datePicker id="dateMisServ" value="#{demo.dateMisServ}" monthNavigator="true" yearNavigator="true" showWeek="true"/>
+                    </h:panelGrid>
+                </div>
+                        
+                <h:panelGrid columns="3" cellpadding="7">
+                    <p:outputLabel for="dureeAmort" value="Durée amort"/>
+                    <p:inputText id="dureeAmort" value="#{demo.dureeAmort}"/>
+                    <h:outputText id="display14" value="#{demo.dureeAmort}"/>
+                </h:panelGrid>
+            
+                <div class="p-field p-col-12 p-md-4">
+                    <h:panelGrid columns="3" cellpadding="7">
+                        <p:outputLabel for="dateFinAmort" value="Date fin d’amortissement"/>
+                        <p:datePicker id="dateFinAmort" value="#{demo.dateFinAmort}" monthNavigator="true" yearNavigator="true" showWeek="true"/>
+                    </h:panelGrid>
+                </div>
+            
+            </h:form>
+            
+        </div>
+       <p:commandButton value="Submit" styleClass="p-mt-3" />
+                        
+
+    </h:body>
+</html>
+
