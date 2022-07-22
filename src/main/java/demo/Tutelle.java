@@ -21,13 +21,11 @@ import javax.inject.Named;
 public class Tutelle {
 
   private Map<String, String> tutImpu = new HashMap<>();
-  private String labeled;
-  // fin tutelle imputation
-
-  // tutelle imputation
+  private String label;
+  
   @PostConstruct
   public void init() {
-    // tutImpu
+
     tutImpu = new HashMap<>();
     tutImpu.put("INP", "INP");
     tutImpu.put("UPS", "UPS");
@@ -42,20 +40,14 @@ public class Tutelle {
     this.tutImpu = tutImpu;
   }
 
-  public String getLabeled() {
-    return labeled;
+  public String getLabel() {
+    return label;
   }
 
-  public void setLabeled(String labeled) {
-    this.labeled = labeled;
+  public void setLabel(String label) {
+    this.label = label;
   }
 
-  /*public String getTutImpu() {
-      return tutImpu;
-  }
-
-  public void setTutImpu(String tutImpu) {
-      this.tutImpu = tutImpu;
-  }*/
+  
 
 }

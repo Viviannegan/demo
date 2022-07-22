@@ -53,17 +53,19 @@
         <div class="p-d-flex p-flex-column">
             <h:form>
                 <h2 class="p-mt-0">Technique : </h2> 
-                
+               
+                <h:form>
                 <div class="p-field p-col-12 p-md-4">
                 <h:panelGrid columns="3" cellpadding="7">
                 <p:outputLabel value="Catégorie"/>
-                <p:selectOneMenu id="labeled" value="#{categorie.labeled}" label="choisissez"
-                                alwaysDisplayLabel="true">
+                <p:selectOneMenu id="cate" value="#{categorie.labeled}" label="choisissez">
+                    <f:selectItem itemLabel="choisissez" itemValue=""/>
                     <f:selectItems value="#{categorie.categorie}"/>
                 </p:selectOneMenu>
                 </h:panelGrid>
                 </div>
-                
+                </h:form>                
+
                 <h:panelGrid columns="3" cellpadding="7">
                     <p:outputLabel for="refApp" value="Référent appareillage"/>
                     <p:inputText id="refApp" value="#{demo.refApp}"/>
@@ -76,18 +78,20 @@
         <!--<div class="card">-->
         <div class="p-d-flex p-flex-column">
             <h:form>
-            <h2 class="p-mt-0">Finance : </h2> 
-                        
+            <h2 class="p-mt-0">Finance : </h2>
+ 
+            <h:form>            
             <div class="p-field p-col-12 p-md-4">
                 <h:panelGrid columns="3" cellpadding="7">
                 <p:outputLabel value="Tutelle imputation"/>
-                <p:selectOneMenu id="labeled" value="#{tutelle.labeled}" label="choisissez"
-                                alwaysDisplayLabel="true">
+                <p:selectOneMenu id="tutImp" value="#{tutelle.label}" label="choisissez">
+                    <f:selectItem itemLabel="choisissez" itemValue=""/>
                     <f:selectItems value="#{tutelle.tutImpu}"/>
                 </p:selectOneMenu>
                 </h:panelGrid>
             </div>
-             
+            </h:form>
+ 
                 <h:panelGrid columns="3" cellpadding="7">
                     <p:outputLabel for="bonCom" value="Bon de commande"/>
                     <p:inputText id="bonCom" value="#{demo.bonCom}"/>
